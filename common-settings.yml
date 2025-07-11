@@ -1,0 +1,22 @@
+# Общие настройки для приложений
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/ # URL Eureka Server
+    register-with-eureka: true   # Регистрировать ли сервис в Eureka (по умолчанию true)
+    fetch-registry: true         # Получать ли реестр сервисов с Eureka (по умолчанию true)
+
+# Включение endpoint'ов для actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    # эндпоинт refresh надо включаться отдельно. Обновляет конфигурацию приложения без перезагрузки приложения.
+    refresh:
+      access: unrestricted
+    env:
+      show-values: always
+    configprops:
+      show-values: always
