@@ -3,5 +3,5 @@ server:
 greeting: Hello
 greetings:
   EN: Hello
-  ES: Hola-2
+  ES: Hola
   DE: Hallo
